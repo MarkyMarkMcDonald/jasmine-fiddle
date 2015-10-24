@@ -8,6 +8,7 @@ var merge2 = require('merge2');
 
 gulp.task('concatParentJs', function () {
   var thirdParty = gulp.src([
+      'bower_components/esprima/esprima.js',
       'bower_components/ace-builds/src-noconflict/ace.js',
       'bower_components/ace-builds/src-noconflict/ext-language_tools.js',
       'bower_components/ace-builds/src-noconflict/mode-javascript.js',
@@ -22,7 +23,7 @@ gulp.task('concatParentJs', function () {
 
   return merge2(thirdParty, firstParty)
     .pipe(concat('parent-script.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('dist/'));
 });
 

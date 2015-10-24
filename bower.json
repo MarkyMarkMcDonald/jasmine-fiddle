@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "angular-ui-ace": "bower",
-    "jasmine-core": "~2.3.4"
+    "jasmine-core": "~2.3.4",
+    "esprima": "~2.0.0"
   }
 }
